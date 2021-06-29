@@ -2401,6 +2401,7 @@
     core-js "^3.8.2"
     global "^4.4.0"
 
+
 "@storybook/components@6.3.0":
   version "6.3.0"
   resolved "https://registry.yarnpkg.com/@storybook/components/-/components-6.3.0.tgz#5ad372abd60ee0cb02516f960f514659e3fbf865"
@@ -2431,7 +2432,9 @@
     ts-dedent "^2.0.0"
     util-deprecate "^1.0.2"
 
+
 "@storybook/components@6.3.1", "@storybook/components@^6.3.0":
+
   version "6.3.1"
   resolved "https://registry.yarnpkg.com/@storybook/components/-/components-6.3.1.tgz#a94488941a64c64bba7d6e042e4a1d4ce99bc58d"
   integrity sha512-sCNalGXSMzVCoElRUYKS+EuIJQr5zNbPepFVzZWXGj2cKd7z6LtHNyEN/3eTnR7Ivdpaf43IZc9pIBmBvSmIFQ==
@@ -2614,6 +2617,7 @@
     ts-dedent "^2.0.0"
     util-deprecate "^1.0.2"
     webpack "4"
+
 
 "@storybook/core-events@6.3.0":
   version "6.3.0"
@@ -2911,18 +2915,18 @@
     react-docgen-typescript "^2.0.0"
     tslib "^2.0.0"
 
-"@storybook/react@^6.1.14":
-  version "6.3.0"
-  resolved "https://registry.yarnpkg.com/@storybook/react/-/react-6.3.0.tgz#e86ef1976fba2f0f80925278f196fb709df55eb4"
-  integrity sha512-GxK88Si9WQa16uUsUBhe6kRhSEZUrR/1ljP6QvLY+C5MyYJZ89DZPAbWnVo47SJCXhAlvJW83nSTSxnobn8RWA==
+"@storybook/react@^6.3.1":
+  version "6.3.1"
+  resolved "https://registry.yarnpkg.com/@storybook/react/-/react-6.3.1.tgz#99e31dd3dcfd548d74ac90abd6b0932974827ef9"
+  integrity sha512-P3neN04YWpIyJ0kLq5UWo390wwM9HG6hVOJUi1uw9lMFbZoy/oVM77ot+77Mtfq3S58Rv51iohFF9DAkxPFNzA==
   dependencies:
     "@babel/preset-flow" "^7.12.1"
     "@babel/preset-react" "^7.12.10"
     "@pmmmwh/react-refresh-webpack-plugin" "^0.4.3"
-    "@storybook/addons" "6.3.0"
-    "@storybook/core" "6.3.0"
-    "@storybook/core-common" "6.3.0"
-    "@storybook/node-logger" "6.3.0"
+    "@storybook/addons" "6.3.1"
+    "@storybook/core" "6.3.1"
+    "@storybook/core-common" "6.3.1"
+    "@storybook/node-logger" "6.3.1"
     "@storybook/react-docgen-typescript-plugin" "1.0.2-canary.3c70e01.0"
     "@storybook/semver" "^7.3.2"
     "@types/webpack-env" "^1.16.0"
