@@ -25,7 +25,11 @@
           <div class="col s6 h-100">
             <form class="search-form">
               <div class="input-field search-form">
-                <input id="search" type="search" required />
+                <input
+                  id="search"
+                  type="search"
+                  placeholder="Enter pokemon name"
+                />
                 <label class="label-icon" for="search"
                   ><i class="material-icons" id="search-icon">search</i></label
                 >
@@ -38,6 +42,7 @@
     </nav>
 
     <div class="main">
+      <div id="error" class="hidden visuallyhidden">test error</div>
       <h3>Gallery</h3>
       <div class="row">
         <div class="col s1 m2 l2"></div>
@@ -59,11 +64,9 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="js/utils.js">
-      ZZz
-    </script>
-    <script src="js/index.js">
-      ZZz
-    </script>
+    <script src="js/utils.js"></script>
+    <script src="js/fetchData.js"></script>
+    <script src="js/dom.js"></script>
+    <script src="js/index.js"></script>
   </body>
 </html>

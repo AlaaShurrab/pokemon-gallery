@@ -6,7 +6,10 @@
 .search-form {
   background-color: rgb(255, 140, 105);
 }
-
+.search-form > input,
+.search-form > input::placeholder {
+  color: white;
+}
 .h-100 {
   height: 100%;
 }
@@ -89,4 +92,32 @@ input:checked + #slider:before {
 
 .card > .card-image > img {
   height: 200px;
+}
+
+#error {
+  display: none;
+  margin: 11px 0;
+  background-color: #ffbaba;
+  color: #d8000c;
+  font-size: 15px;
+  transition: all 0.4s linear;
+  display: block;
+  padding: 10px 0;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.visuallyhidden {
+  opacity: 0;
+}
+
+.card > .card-action {
+  padding: 10px 24px;
+}
+
+.checkbox-label {
+  font-size: 16px;
+  margin-bottom: 5px;
 }
