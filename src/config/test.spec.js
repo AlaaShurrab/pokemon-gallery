@@ -13,7 +13,6 @@ describe('validate config', () => {
 
   it('server config', () => {
     expect(config.server).to.have.property('port');
-    expect(config.server).to.have.property('secret');
   });
 
   it('database config', () => {

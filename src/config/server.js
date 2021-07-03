@@ -5,7 +5,6 @@ const envVarsSchema = yup
   .object()
   .shape({
     PORT: isProduction ? yup.number() : yup.number().required(),
-    SECRET: yup.string().required(),
   })
   .required();
 
@@ -23,7 +22,6 @@ const config = () => {
 
   return {
     port: envVars.PORT,
-    secret: envVars.SECRET,
   };
 };
 
