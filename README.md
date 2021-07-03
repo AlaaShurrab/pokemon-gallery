@@ -48,7 +48,6 @@ Environment variables are one of the ways we keep our product safe. If you want 
 - create .env file
 - add your Environment variables
 ```sh
-DEV_DB_URL= # Your development PostgreSQL connect
 DATABASE_URL= # Your production PostgreSQL connect
 PORT= #port number
 ```
