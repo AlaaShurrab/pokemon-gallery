@@ -135,7 +135,6 @@ const createElementsObj = (obj) => {
 };
 
 const appendNodes = (elementsObj, obj) => {
-  console.log(elementsObj);
   mapObj(obj, (key, value) => {
     value.forEach((node) => {
       elementsObj[key].appendChild(elementsObj[node]);
@@ -156,60 +155,4 @@ const setTextContents = (elementsObj, obj) => {
   mapObj(obj, (key, value) => {
     elementsObj[key].textContent = value;
   });
-};
-
-const createCard = ({ name, img, types, owned, number }) => {
-  const elementsObj = createElementsObj({
-    card: 'div',
-    imageCardDiv: 'div',
-    imageCard: 'img',
-    cardContent: 'div',
-    pokemonName: 'h5',
-    pokemonTypes: 'p',
-    cardAction: 'div',
-    checkboxHolder: 'label',
-    checkbox: 'input',
-    checkboxRound: 'span',
-  });
-
-  appendNodes(elementsObj, {
-    card: ['imageCardDiv', 'cardContent', 'cardAction'],
-    imageCardDiv: ['imageCard'],
-    cardContent: ['pokemonName', 'pokemonTypes'],
-    cardAction: ['checkboxHolder'],
-    checkboxHolder: ['checkbox', 'checkboxRound'],
-  });
-
-  setClasses(elementsObj, {
-    card: ['col', 's12', 'm6', 'l3', 'card'],
-    imageCardDiv: 'card-image',
-    cardContent: 'card-content',
-    cardAction: 'card-action',
-    checkboxRound: 'round',
-  });
-
-  setTextContents(elementsObj, {
-    pokemonName: name,
-    pokemonTypes: types,
-    checkboxRound: 'Captured',
-  });
-
-  attribute(elementsObj.imageCard, 'src', img);
-  attribute(elementsObj.checkbox, 'type', 'checkbox');
-  attribute(elementsObj.checkbox, 'id', number);
-  attribute(elementsObj.checkboxHolder, 'id', 'switch');
-  attribute(elementsObj.checkboxRound, 'id', 'slider');
-  attribute(elementsObj.checkbox, 'checked', owned);
-  elementsObj.checkbox.addEventListener('change', async function a() {
-    try {
-      this.disable = true;
-      const { data } = await axios.put(`/api/pokemons/${this.id}`);
-      this.disable = false;
-    } catch (error) {
-      this.checked = !this.checked;
-      this.disable = false;
-    }
-  });
-
-  return elementsObj.card;
 };
