@@ -5,6 +5,11 @@ a gallery where you can view some Pokémon's and catch them
 ## **The Problem** :no_entry_sign: :-
 
 - it is hard to catch pokemons and to view there info in a web site that saves the data for me and my friends 
+- TAP program assaignment 1 week o :
+- front-end
+![image](https://user-images.githubusercontent.com/37113946/124356359-4fbf5180-dc1e-11eb-9440-27c1d5523f14.png)
+- back-end
+![image](https://user-images.githubusercontent.com/37113946/124356535-294de600-dc1f-11eb-8ff8-5c018150ce45.png)
 
 ## **The solution** :bulb: :-
 
