@@ -7,9 +7,9 @@
   },
   "scripts": {
     "dev": "cross-env DEBUG=server nodemon --exec babel-node ./src/index.js",
-    "start": "cross-env DEBUG=server node dist/src/index.js",
+    "start": "cross-env DEBUG=server node dist/index.js",
     "test": "cross-env NODE_ENV=test mocha \"src/**/*.spec.js\"",
-    "build:server": "cross-env DEBUG=server babel . --out-dir dist --ignore \"node_modules\" \"public\"",
+    "build:server": "cross-env DEBUG=server babel ./src --out-dir dist --ignore \"node_modules\" \"public\"",
     "build": "npm run clean && npm run build:server",
     "clean": "rm -rf dist && mkdir dist",
     "build:db": "cross-env DEBUG=server babel-node ./src/database/build.script.js",
