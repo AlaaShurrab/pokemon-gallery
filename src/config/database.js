@@ -7,11 +7,6 @@ const envVarsSchema = yup
       then: yup.string(),
       otherwise: yup.string().required(),
     }),
-    DATABASE_URL_TEST: yup.string().when('NODE_ENV', {
-      is: 'test',
-      then: yup.string().required(),
-      otherwise: yup.string(),
-    }),
   })
   .required();
 
