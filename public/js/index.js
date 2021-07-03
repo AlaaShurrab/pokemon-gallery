@@ -1,28 +1,43 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
-const cardContainer = document.querySelector('.inner-card-container');
-const searchInput = document.querySelector('#search');
-
-const cardList = (arr) => {
-  arr.forEach((obj) => {
-    cardContainer.appendChild(createCard(obj));
-  });
-};
-
-searchInput.addEventListener('change', async function a() {
-  try {
-    const { data } = await axios.get(`/api/pokemons/find/${this.value}`);
-    clear(cardContainer);
-    cardList(data);
-  } catch (error) {
-    console.log(error);
-  }
-});
 
 (async () => {
   try {
-    const { data } = await axios.get('/api/pokemons/random');
+    const { data } = await getRandomPokemonFetch();
     cardList(data);
   } catch (error) {
-    console.log(error);
+    setErrorMsg(error);
   }
 })();
+
+const cardContainer = document.querySelector('.inner-card-container');
+const searchInput = document.querySelector('#search');
+const searchForm = document.querySelector('.search-form');
+const title = document.querySelector('.main > h3');
+
+searchForm.onsubmit = (e) => {
+  e.preventDefault();
+  return false;
+};
+
+searchInput.addEventListener('keyup', async (event) => {
+  const keyCodeInput = String.fromCharCode(event.keyCode);
+  if (
+    /[a-zA-Z0-9-_ ]/.test(keyCodeInput) ||
+    event.keyCode === 8 ||
+    event.keyCode === 46 ||
+    event.keyCode === 13
+  ) {
+    const inputValue = event.target.value.trim().toLowerCase();
+    try {
+      const { data } = await formResultFetch(inputValue);
+
+      title.textContent = !inputValue
+        ? 'Gallery'
+        : `Search result on: ${inputValue}`;
+      cardList(data);
+    } catch (error) {
+      setErrorMsg(error);
+    }
+  }
+});
